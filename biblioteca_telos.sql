@@ -6,9 +6,9 @@ USE biblioteca_telos
 --Cria tabela books
 CREATE TABLE books (
 	id INT PRIMARY KEY IDENTITY(1, 1),
-	title VARCHAR(100) NOT NULL UNIQUE,
-	author VARCHAR(100) NOT NULL,
-	genre VARCHAR(50) NOT NULL,
+	title VARCHAR(255) NOT NULL UNIQUE,
+	author VARCHAR(255) NOT NULL,
+	genre VARCHAR(100) NOT NULL,
 	published_year INT NOT NULL
 )
 
@@ -38,8 +38,8 @@ INSERT INTO books (title, author, genre, published_year) VALUES
 --Cria a tabela users
 CREATE TABLE users (
 	id INT PRIMARY KEY IDENTITY(1, 1),
-	name VARCHAR(100) NOT NULL UNIQUE,
-	email VARCHAR(100) NOT NULL UNIQUE,
+	name VARCHAR(255) NOT NULL,
+	email VARCHAR(255) NOT NULL UNIQUE,
 )
 
 --Insere as informações da tabela users
